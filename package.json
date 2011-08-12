@@ -1,0 +1,15 @@
+{
+    "name": "node-jslint-all",
+    "description": "A JSLint based JavaScript code quality tool",
+    "keywords": [
+        "jslint"
+    ],
+    "version": "0.1.0",
+    "author" : "Davy Brion <ralinx@davybrion.com>",
+    "dependencies": {
+        "nopt": "~1.0.0"
+    },
+    "engines": {
+        "node": ">=0.4.0"
+    },
+}
