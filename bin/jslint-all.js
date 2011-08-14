@@ -50,5 +50,5 @@ if (!options.argv.remain.length) {
 var pathToCheck = path.resolve(path.normalize(options.argv.remain[0]));
 delete options.argv;
 runner.check(pathToCheck, options, function(err, results) {
-		
+
 });
