@@ -1,15 +1,35 @@
 {
     "name": "node-jslint-all",
     "description": "A JSLint based JavaScript code quality tool",
+    "version": "0.1.0",
+    "author" : "Davy Brion <ralinx@davybrion.com>",
+    "homepage": "https://github.com/davybrion/node-jslint-all",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/davybrion/node-jslint-all.git"
+    },
+    "bugs": {
+        "web": "https://github.com/davybrion/node-jslint-all/issues"
+    },
+    "licenses": [
+        {
+            "type": "Modified MIT / BSD",
+            "url": "https://github.com/davybrion/node-jslint-all/blob/master/LICENSE"
+        }
+    ],
     "keywords": [
         "jslint"
     ],
-    "version": "0.1.0",
-    "author" : "Davy Brion <ralinx@davybrion.com>",
+    "bin": {
+        "jslint-all": "./bin/jslint-all.js"    
+    },
     "dependencies": {
         "nopt": "~1.0.0"
     },
     "engines": {
         "node": ">=0.4.0"
+    },
+    "directories": {
+        "lib": "./lib"
     }
 }
