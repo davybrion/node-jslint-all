@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 var runner = require('../lib/runner.js'),
+	consoleReporter = require('../lib/console_reporter.js'),
 	nopt = require('nopt'),
 	path = require('path');
-
 
 var optionSet = {
 	'adsafe' : Boolean, 	  // true, if ADsafe rules should be enforced
@@ -50,5 +50,8 @@ if (!options.argv.remain.length) {
 var pathToCheck = path.resolve(path.normalize(options.argv.remain[0]));
 delete options.argv;
 runner.check(pathToCheck, options, function(err, results) {
-
+	if (results.length > 0) {
+		consoleReporter.report(results);
+		process.exit(1);
+	};
 });
