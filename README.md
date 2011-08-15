@@ -4,6 +4,10 @@ node-jslint-all is JSLint on Node, with minimized output and recursive path scan
 by node-jslint (https://github.com/reid/node-jslint) in that it's very simple in what it supports, but i wanted
 minimal console output (only errors, basically) and recursive path scanning. 
 
+## installation
+
+	$ npm install -g node-jslint-all
+
 ## usage
 
 If you want to execute node-jslint-all on all JavaScript files in this folder and its subfolders, just do:
