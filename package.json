@@ -1,7 +1,7 @@
 {
     "name": "node-jslint-all",
     "description": "A JSLint based JavaScript code quality tool",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author" : "Davy Brion <ralinx@davybrion.com>",
     "homepage": "https://github.com/davybrion/node-jslint-all",
     "repository": {

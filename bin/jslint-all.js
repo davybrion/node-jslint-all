@@ -6,6 +6,9 @@ var runner = require('../lib/runner.js'),
 	path = require('path');
 
 var optionSet = {
+	// node-jslint-all options
+	'exclude' : String,			// path to exclude from the jslint check
+	// JSLint options
 	'adsafe' : Boolean, 	  // true, if ADsafe rules should be enforced
 	'bitwise' : Boolean,    // true, if bitwise operators should not be allowed
 	'browser' : Boolean,    // true, if the standard browser globals should be predefined
@@ -45,13 +48,18 @@ if (!options.argv.remain.length) {
 	console.warn('No path specified!');
 	console.warn("Usage: " + process.argv[1] + " [--" + Object.keys(optionSet).join("] [--") + "] <path>");
 	process.exit(1);
-};
+}
 
 var pathToCheck = path.resolve(path.normalize(options.argv.remain[0]));
+
+if (options.exclude) {
+	options.exclude = path.resolve(path.normalize(options.exclude));	
+}
+
 delete options.argv;
 runner.check(pathToCheck, options, function(err, results) {
 	if (results.length > 0) {
 		consoleReporter.report(results);
 		process.exit(1);
-	};
+	}
 });

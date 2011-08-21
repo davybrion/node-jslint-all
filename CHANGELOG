@@ -1,0 +1,2 @@
+0.2.0
+	- added an --exclude parameter so you can provide a path to exclude from the jslint check
